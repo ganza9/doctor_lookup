@@ -4,6 +4,10 @@ exports.apiKey = "1039e7f9f83c42d112f2a2852a3812a5";
 },{}],2:[function(require,module,exports){
 'use strict';
 
+var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']);
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function () {
@@ -34,10 +38,10 @@ $(document).ready(function () {
       });
       $('#showDoctor').text('The doctors available in your area are:');
       doctor.forEach(function (name) {
-        $('#doctorList').append('<li>${name}</li>');
+        $('#doctorList').append('<li>' + doctors + '</li>');
       });
     }, function (error) {
-      $('#showErrors').text('There was an error processing your request: ${error.message}');
+      $('#showErrors').text('There was an error processing your request:'(_templateObject, error.message));
     });
   });
 });
