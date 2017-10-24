@@ -28,10 +28,10 @@ $(document).ready(function(){
       });
       $('#showDoctor').text('The doctors available in your area are:');
       doctor.forEach(function(name){
-        $('#doctorList').append('<li>${name}</li>');
+        $('#doctorList').append(`<li>${doctors}</li>`);
       });
     }, function(error){
-      $('#showErrors').text('There was an error processing your request: ${error.message}');
+      $('#showErrors').text('There was an error processing your request:' `${error.message}`);
     });
   });
 });
